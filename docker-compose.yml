@@ -1,0 +1,12 @@
+version: '3'  
+services:
+  app:
+    build: .
+    ports:
+      - "8080:5000"
+    volumes:
+      - ./data:/app/data
+      - ./static/uploads:/app/static/uploads
+    environment:
+      FLASK_APP: app.py
+      FLASK_RUN_HOST: 0.0.0.0

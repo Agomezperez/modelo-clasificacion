@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado de Clasificación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+        }
+        img {
+            max-width: 80%;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-size: 16px;
+            border: 1px solid #4CAF50;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resultado de la Clasificación</h1>
+    <p>El tipo de residuo es: <strong>{{ prediction }}</strong></p>
+    <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Imagen Clasificada">
+    <br>
+    <a href="/">Volver a intentar</a>
+</body>
+</html>
